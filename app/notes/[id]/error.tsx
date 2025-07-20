@@ -2,7 +2,7 @@ import css from "./ErrorMessage.module.css";
 
 interface ErrorMessageProps {
   message?: string;
-  onClose?: () => void;
+  onClose: () => void; // Додано пропс для закриття повідомлення
 }
 
 export default function ErrorMessage({
