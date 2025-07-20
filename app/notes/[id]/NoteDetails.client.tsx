@@ -4,7 +4,6 @@ import css from "./NoteDetails.module.css";
 import { fetchNoteById } from "@/lib/api";
 import { useParams, useRouter } from "next/navigation";
 import Loader from "@/components/Loader/Loader";
-import ErrorText from "@/components/Error/ErrorMessage";
 import ErrorMessage from "@/components/Error/ErrorMessage";
 
 export default function NoteDetailsClient() {
@@ -27,9 +26,7 @@ export default function NoteDetailsClient() {
   return (
     <>
       {isLoading && <Loader />}
-      {isError && <ErrorMessage message="Something went wrong." onClose={function (): void {
-              throw new Error("Function not implemented.");
-          } } />}
+      {isError && <ErrorMessage message="An unexpected error occurred." />}
       {note && (
         <div className={css.container}>
           <div className={css.item}>

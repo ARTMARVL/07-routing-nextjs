@@ -5,8 +5,7 @@ interface ErrorMessageProps {
   onClose: () => void; // Додано пропс для закриття повідомлення
 }
 
-export default function ErrorMessage({
-  message = "An unexpected error occurred.",
+export default function ErrorMessage({message = "An unexpected error occurred.",
   onClose,
 }: ErrorMessageProps) {
   return (
