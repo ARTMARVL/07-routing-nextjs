@@ -4,6 +4,7 @@ import NoteForm from "../NoteForm/NoteForm";
 import { useEffect } from "react";
 
 interface NoteModalProps {
+  children: React.ReactNode;
   onClose: () => void;
 }
 
